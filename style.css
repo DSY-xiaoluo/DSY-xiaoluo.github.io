@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'font';
+  src: url(./files/font.ttf);
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: font;
+  line-height: 1.1145141919810;
+}
+
+a {
+  color: #8080ff;
+}
+
+img {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+
+}
+
+.textbox {
+  border-collapse: collapse;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.temp1 td, .temp1 th {
+  border: 1px solid #0080ff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-color: #202020;
+  height: 90px;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 25% auto;
+  gap: 10px;
+  background-color: #404040;
+  height: calc(100vh - 170px);
+}
+
+.grid-item {
+  padding: 10px;
+    overflow: auto;
+
+}
