@@ -3,6 +3,10 @@
   src: url(./files/font.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000;
   color: #ffffff;
@@ -11,12 +15,22 @@ body {
   line-height: 1.1145141919810;
 }
 
+@keyframes scrolling-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 a {
   color: #8080ff;
 }
 
 img {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
 
 }
 
@@ -25,7 +39,15 @@ img {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
 }
 
-.temp1 td, .temp1 th {
+thead {
+  position: sticky;
+  top: -10px;
+  z-index: 1;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.temp1 td,
+.temp1 th {
   border: 1px solid #0080ff;
 }
 
@@ -45,8 +67,13 @@ img {
   height: calc(100vh - 170px);
 }
 
+.grid-container2.mobile-disable {
+  grid-template-columns: unset;
+  grid-template-rows: 25% auto;
+}
+
 .grid-item {
   padding: 10px;
-    overflow: auto;
+  overflow: auto;
 
 }
