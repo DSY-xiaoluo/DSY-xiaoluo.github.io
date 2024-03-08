@@ -84,7 +84,7 @@
         </thead>
         <tr>
           <td style="background-color: rgba(0, 63, 0, 1); line-height: 1;">
-            <span>首页</span>
+            <span><a href="./index.html">文档头</a></span>
             <br>
             <span>├ <a href="#网站新样式说明">网站新样式说明</a></span>
             <br>
@@ -101,34 +101,32 @@
         <!--动态内容，见sidebar.html-->
         <!-- 加载侧边栏内容 -->
         <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            // 创建一个新的XMLHttpRequest对象
-            var xhr = new XMLHttpRequest();
-            // 设置请求类型和URL
-            xhr.open('GET', './content/sidebar.html', true);
-            // 设置回调函数
-            xhr.onreadystatechange = function () {
-              // 如果请求状态为4（请求已完成，且响应已就绪）
-              if (xhr.readyState === 4) {
-                // 如果状态码为200（请求成功）
-                if (xhr.status === 200) {
-                  // 如果响应文本不为空
-                  if (xhr.responseText.trim() !== '') {
-                    // 将响应文本设置为侧边栏的内容
-                    document.getElementById('sidebar').innerHTML = xhr.responseText;
-                  } else {
-                    // 如果响应文本为空，设置侧边栏内容为“Error: No content found.”
-                    document.getElementById('sidebar').innerHTML = 'Error: No content found.';
-                  }
+          // 创建一个新的XMLHttpRequest对象
+          var xhr = new XMLHttpRequest();
+          // 设置请求类型和URL
+          xhr.open('GET', '/content/sidebar.html', true);
+          // 设置回调函数
+          xhr.onreadystatechange = function () {
+            // 如果请求状态为4（请求已完成，且响应已就绪）
+            if (xhr.readyState === 4) {
+              // 如果状态码为200（请求成功）
+              if (xhr.status === 200) {
+                // 如果响应文本不为空
+                if (xhr.responseText.trim() !== '') {
+                  // 将响应文本设置为侧边栏的内容
+                  document.getElementById('sidebar').innerHTML = xhr.responseText;
                 } else {
-                  // 如果状态码不为200，设置侧边栏内容为“Error: Failed to load content.”
-                  document.getElementById('sidebar').innerHTML = 'Error: Failed to load content.';
+                  // 如果响应文本为空，设置侧边栏内容为“Error: No content found.”
+                  document.getElementById('sidebar').innerHTML = 'Error: No content found.';
                 }
+              } else {
+                // 如果状态码不为200，设置侧边栏内容为“Error: Failed to load content.”
+                document.getElementById('sidebar').innerHTML = 'Error: Failed to load content.';
               }
             }
-            // 发送请求
-            xhr.send();
-          });
+          };
+          // 发送请求
+          xhr.send();
         </script>
       </div>
     </div>
@@ -182,9 +180,11 @@
               给大家展示其中一个“无缝剪辑”视频看看吧
               <div class="temp1">
                 <table class="textbox" style="border: 1px solid #0080ff; background-color: #004080; margin: 10px;">
-                  <tr style="background-color: #0080ff; color: rgba(0, 0, 0, 1); font-weight: bold; color: #fff;">
-                    <td colspan="2"><strong>附件</strong></td>
-                  </tr>
+                  <thead style="top: 9px; z-index: 0;">
+                    <tr style="background-color: #0080ff; color: rgba(0, 0, 0, 1); font-weight: bold; color: #fff;">
+                      <td colspan="2"><strong>附件</strong></td>
+                    </tr>
+                  </thead>
                   <tr>
                     <td><span>视频下载链接（已加密）</span></td>
                     <td><a
