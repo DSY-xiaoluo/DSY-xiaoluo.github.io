@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>重定向至"/pages/HOMO14/index.html"</title>
+  <script>
+    window.location.href = '/pages/homo14/index.html';
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
