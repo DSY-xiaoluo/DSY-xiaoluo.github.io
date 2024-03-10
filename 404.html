@@ -11,8 +11,7 @@
   <title>404 | DSY_xiaoluo</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
-  <javaScript src="/script.js">
-    </script>
+  <script src="/script.js"></script>
 </head>
 
 <body>
@@ -38,72 +37,45 @@
 
   <div class="grid-container2">
     <!--侧边栏~~~-->
-    <div class="grid-item">
-      <!--导航-->
-      <table class="textbox"
-        style="border: 1px solid rgba(0, 128, 0, 1); width: 100%; text-align: center; box-shadow: -5px 5px 5px rgba(0, 0, 0, 1); line-height: 2;">
-        <thead>
+    <div class="grid-item" style="direction: rtl;">
+      <div style="direction: ltr;">
+        <!--导航-->
+        <table class="textbox"
+          style="border: 1px solid rgba(0, 128, 0, 1); width: 100%; text-align: center; box-shadow: 0px 5px 5px rgba(0, 0, 0, 1); line-height: 2;">
+          <thead>
+            <tr>
+              <td
+                style="background-color: rgba(0, 128, 0, 1); color: rgb(255, 255, 255); font-weight: bold; text-align: left; line-height: 1.1145141919810;">
+                <span><strong>导航</strong></span>
+              </td>
+            </tr>
+          </thead>
           <tr>
-            <td
-              style="background-color: rgba(0, 128, 0, 1); color: rgb(255, 255, 255); font-weight: bold; text-align: left; line-height: 1.1145141919810;">
-              <span><strong>导航</strong></span>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/index.html">首页</a></span>
             </td>
           </tr>
-        </thead>
-        <tr>
-          <td style="background-color: rgba(0, 64, 0, 1);">
-            <span><a href="/index.html">首页</a></span>
-          </td>
-        </tr>
-        <tr>
-          <td style="background-color: rgba(0, 64, 0, 1);">
-            <span><a href="/blog.html">博客</a></span>
-          </td>
-        </tr>
-        <tr>
-          <td style="background-color: rgba(0, 64, 0, 1);">
-            <span><a href="/pages.html">页面</a></span>
-          </td>
-        </tr>
-        <tr>
-          <td style="background-color: rgba(0, 64, 0, 1);">
-            <span><a href="/about.html">关于</a></span>
-          </td>
-        </tr>
-      </table>
-      <br>
-      <!--其它杂七杂八的-->
-      <div id="sidebar">
-        <!--动态内容，见sidebar.html-->
-        <!-- 加载侧边栏内容 -->
-        <script>
-          // 创建一个新的XMLHttpRequest对象
-          var xhr = new XMLHttpRequest();
-          // 设置请求类型和URL
-          xhr.open('GET', '/content/sidebar.html', true);
-          // 设置回调函数
-          xhr.onreadystatechange = function () {
-            // 如果请求状态为4（请求已完成，且响应已就绪）
-            if (xhr.readyState === 4) {
-              // 如果状态码为200（请求成功）
-              if (xhr.status === 200) {
-                // 如果响应文本不为空
-                if (xhr.responseText.trim() !== '') {
-                  // 将响应文本设置为侧边栏的内容
-                  document.getElementById('sidebar').innerHTML = xhr.responseText;
-                } else {
-                  // 如果响应文本为空，设置侧边栏内容为“Error: No content found.”
-                  document.getElementById('sidebar').innerHTML = 'Error: No content found.';
-                }
-              } else {
-                // 如果状态码不为200，设置侧边栏内容为“Error: Failed to load content.”
-                document.getElementById('sidebar').innerHTML = 'Error: Failed to load content.';
-              }
-            }
-          };
-          // 发送请求
-          xhr.send();
-        </script>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/blog.html">博客</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/pages.html">页面</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/about.html">关于</a></span>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <!--其它杂七杂八的-->
+        <div id="sidebar">
+          <!--动态内容，见sidebar.html-->
+        </div>
       </div>
     </div>
 
@@ -119,7 +91,8 @@
           </tr>
         </thead>
         <tr>
-          <td style="background: repeating-linear-gradient(57.5deg, #800000, #800000 5px, transparent 5px, transparent 15px);">
+          <td
+            style="background: repeating-linear-gradient(57.5deg, #800000, #800000 5px, transparent 5px, transparent 15px);">
             <span style="font-size: 32px;">404</span><br>
             <span>File not found</span><br>
             <table class="textbox" style="border: 1px solid #c0c0c0; margin: 10px;">
@@ -134,16 +107,17 @@
                 <td style="background-color: #606060;">
                   <span>可能是因为您输入了错误的网址，或者该网页已被删除或移动。</span><br>
                   <span>如果您认为这是一个严重错误，请联系网站管理员。</span><br>
-                  <span>如果您想返回主页，请点击下面的链接。</span><br>
-                  <a href="/index.html">首页</a>
+                  <span>如果您想返回主页或上一页，请点击下面的链接。</span><br>
+                  <span><a href="javascript:history.back()">返回上一页</a></span><br>
+                  <span><a href="/index.html">返回主页</a></span><br>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
-      <br>
-
+      <div style="height: 100%;"></div>
+      <div id="sidebar"></div>
     </div>
   </div>
   <div style="width: 100%; text-align: center"><br>© 2024 DSY_xiaoluo - 妙狗国国王</div>
