@@ -51,6 +51,19 @@ thead {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+}
+
+input, select, button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
 .temp1 td,
 .temp1 th {
   border: 1px solid #0080ff;
@@ -84,7 +97,7 @@ thead {
 }
 
 .grid-container2.mobile-disable {
-  grid-template-columns: unset;
+  grid-template-columns: inherit;
   grid-template-rows: 25% auto;
 }
 

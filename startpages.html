@@ -1,0 +1,207 @@
+<!--
+  我是彩蛋
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>起始页 | DSY_xiaoluo</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js"></script>
+</head>
+
+<body>
+  <div class="grid-container">
+
+    <!--我下面是标题-->
+    <div class="grid-item">
+      <span>www.xiaoluo.link > <strong>startpages.html</strong></span><br>
+      <h1 style="font-size: 32px;"><strong>起始页</strong></h1>
+      <!-- <h2>皇帝的新简介</h2> -->
+    </div>
+
+    <!--我下面是页面信息-->
+    <div class="grid-item" style="text-align: right;">
+      <span>2024年3月11日23时20分：页面创建时间</span><br>
+      <span>2024年3月11日23时20分：页面修改时间</span>
+    </div>
+
+  </div>
+
+  <!--看见标题栏和内容区中间的空隙了吗？没错，那是我-->
+  <div style="height: 10px;"></div>
+
+  <div class="grid-container2">
+    <!--侧边栏~~~-->
+    <div class="grid-item" style="direction: rtl;">
+      <div style="direction: ltr;">
+        <!--目录-->
+        <table class="textbox" style="border: 1px solid rgba(0, 128, 0, 1); width: 100%;">
+          <thead>
+            <tr>
+              <td style="background-color: rgba(0, 128, 0, 1); color: rgb(255, 255, 255); font-weight: bold;">
+                <span><strong>目录</strong></span>
+              </td>
+            </tr>
+          </thead>
+          <tr>
+            <td style="background-color: rgba(0, 63, 0, 1); line-height: 1;">
+              <span><a href="./startpages.html">文档头</a></span>
+              <br>
+              <span>├ <a href="#搜索">搜索</a></span>
+              <br>
+
+              <span>文档尾</span>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <!--警告-->
+        <table class="textbox" style="border: 1px solid rgba(255, 255, 0, 1); width: 100%;">
+          <thead>
+            <tr>
+              <td style="background-color: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); font-weight: bold;">
+                <span><strong>警告</strong></span>
+              </td>
+            </tr>
+          </thead>
+          <tr>
+            <td style="background-color: rgba(128, 128, 0, 1);">
+              <span>此浏览器起始页为站长自用</span>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+        <!--www.xiaoluo.link-->
+        <table class="textbox"
+          style="border: 1px solid rgba(0, 128, 0, 1); width: 100%; text-align: center; line-height: 2;">
+          <thead>
+            <tr>
+              <td
+                style="background-color: rgba(0, 128, 0, 1); color: rgb(255, 255, 255); font-weight: bold; text-align: left; line-height: 1.1145141919810;">
+                <span><strong>www.xiaoluo.link</strong></span>
+              </td>
+            </tr>
+          </thead>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/index.html">首页</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/blog.html">博客</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/pages.html">页面</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: rgba(0, 64, 0, 1);">
+              <span><a href="/about.html">关于</a></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--正文呐-->
+    <div class="grid-item">
+      <a name="搜索"></a>
+      <table class="textbox" style="border: 1px solid #c0c0c0; width: 100%;">
+        <thead>
+          <tr>
+            <td style="background-color: #c0c0c0; color: rgba(0, 0, 0, 1); font-weight: bold;">
+              <h3><strong>搜索</strong></h3>
+            </td>
+          </tr>
+        </thead>
+        <tr>
+          <td style="background-color: #606060;">
+            <span>
+              <form id="searchForm" onsubmit="return performSearch()" style="margin: 10px;">
+                <input type="text" id="searchInput" placeholder="输入搜索内容" style="width: calc(100% - 8px);"><br>
+                <select id="searchEngine">
+                  <option disabled>↓搜索引擎</option>
+                  <option value="https://www.bing.com/search?q=">Bing</option>
+                  <option value="https://www.google.com/search?q=">Google</option>
+                  <option value="https://m.quark.cn/s?q=">Quark</option>
+                  <option disabled>↓其它</option>
+                  <option value="https://github.com/search?q=">GitHub</option>
+                  <option value="https://learn.microsoft.com/zh-cn/search/?terms=">Microsoft Learn</option>
+                  <option value="https://kaifa.baidu.com/searchPage?wd=">（百度）开发者搜索</option>
+                  <option value="https://www.jyshare.com/index.php?s=1">菜鸟工具</option>
+                  <option value="https://www.bilibili.com/search?keyword=">Bilibili</option>
+
+                  <option disabled>↓全是广告</option>
+                  <option value="https://www.baidu.com/s?wd=">Baidu</option>
+                  <option value="https://so.csdn.net/so/search?q=">CSDN</option>
+                </select>
+                <button type="submit">搜索</button>
+              </form>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <!-- <br>
+      <a name="工具"></a>
+      <table class="textbox" style="border: 1px solid #c0c0c0; width: 100%;">
+        <thead>
+          <tr>
+            <td style="background-color: #c0c0c0; color: rgba(0, 0, 0, 1); font-weight: bold;">
+              <h3><strong>工具</strong></h3>
+            </td>
+          </tr>
+        </thead>
+        <tr>
+          <td style="background-color: #606060;">
+            <a href="https://www.jyshare.com/" style="color: unset; text-decoration: unset;">
+              <div class="blogbox">
+                <div style="position: sticky; top: 10px; background-color: #60606080;"><span><strong>菜鸟工具 -
+                      不止于工具</strong></span>
+                </div>
+                <span>菜鸟工具，为开发设计人员提供在线工具，网址导航，提供在线PHP、Python、 CSS、JS
+                  调试，中文简繁体转换，进制转换等工具。致力于打造国内专业WEB开发工具，集成开发环境，WEB开发教程</span><br>
+                <span style="font-size: 12px;">https://www.jyshare.com/</span><br>
+              </div>
+            </a>
+            <a href="https://pandao.github.io/editor.md/" style="color: unset; text-decoration: unset;">
+              <div class="blogbox">
+                <div style="position: sticky; top: 10px; background-color: #60606080;"><span><strong>Editor.md - 开源在线 Markdown 编辑器</strong></span>
+                </div>
+                <span>Editor.md: a simple online markdown editor.</span><br>
+                <span style="font-size: 12px;">https://pandao.github.io/editor.md/</span><br>
+              </div>
+            </a>
+            <a href="https://remeins.com/" style="color: unset; text-decoration: unset;">
+              <div class="blogbox">
+                <div style="position: sticky; top: 10px; background-color: #60606080;"><span><strong>记灵在线工具 - 更专注于发现工具的实用性</strong></span>
+                </div>
+                <span>记灵在线工具，更加专注于生活中常用的，好用的实用性工具。目前已经推出了PDF工具、音频工具、视频工具、图片工具、文档工具、文字工具等日常高频率使用的在线工具。</span><br>
+                <span style="font-size: 12px;">https://remeins.com/</span><br>
+              </div>
+            </a>
+
+          </td>
+        </tr>
+      </table>
+      <br> -->
+    </div>
+  </div>
+  <div style="width: 100%; text-align: center"><br>© 2024 DSY_xiaoluo - 妙狗国国王</div>
+</body>
+
+<script>
+  // JavaScript 代码，检测用户代理，并根据需要添加类名
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.querySelector('.grid-container2').classList.add('mobile-disable');
+  }
+</script>
+
+</html>
