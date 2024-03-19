@@ -49,7 +49,6 @@ thead {
   position: sticky;
   top: -11px;
   z-index: 1;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 h1, h2, h3, h4, h5, h6 {
