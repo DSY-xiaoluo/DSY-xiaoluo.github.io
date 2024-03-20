@@ -1,7 +1,12 @@
 @font-face {
   font-family: 'font';
-  src: url(./files/font.ttf);
+  src: url(/files/font.ttf);
 }
+
+/* @font-face {
+  font-family: 'simsun';
+  src: url(/files/font-simsun.ttc#新宋体) format('truetype');
+} */
 
 html {
   scroll-behavior: smooth;
